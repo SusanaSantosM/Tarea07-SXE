@@ -1,0 +1,42 @@
+services:
+
+  joomla:
+    image: joomla
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      JOOMLA_DB_HOST: db
+      JOOMLA_DB_USER: mysql
+      JOOMLA_DB_PASSWORD: mysql
+      JOOMLA_DB_NAME: mysql_db
+      JOOMLA_ADMIN_USER: susibel
+      JOOMLA_ADMIN_USERNAME: susibel26
+      JOOMLA_ADMIN_PASSWORD: joomla
+      JOOMLA_ADMIN_EMAIL: ssantosmallqui@danielcastelao.org
+    volumes:
+      - joomla_data:/var/www/html
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: mysql_db
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+    volumes:
+      - db_data:/var/lib/mysql
+
+  php:
+   image: phpmyadmin/phpmyadmin:latest
+   ports:
+    - "8081:80"
+   environment:
+     PMY_HOST: db
+   volumes:
+    - db_data:/var/lib/mysql
+
+volumes:
+  joomla_data:
+  db_data:
