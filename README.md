@@ -26,7 +26,7 @@ Luego vamos a ejecutar nuestro docker-compose con el siguiente comando:
 
 ``docker-compose up -d``
 
-Luego de que se desacargue las iamgenes y cree los contenedores, podremos confirmar si todo ah saldio correctamente, accediento desde el navegador con nuestro ip y el puerto especificado en el compose: https://10.0.9.77:80  
+Luego de que se desacargue las iamgenes y cree los contenedores, podremos confirmar si todo ah saldio correctamente, accediento desde el navegador con nuestro ip y el puerto especificado en el compose: https://10.0.9.77:8080  
 
 <details>
   <summary>Comprobación</summary>
@@ -40,7 +40,7 @@ Luego de que se desacargue las iamgenes y cree los contenedores, podremos confir
 Para instalar Joomla simplemente especificamos los datos que nos pidan. En datos de acceso vamos a especificar los datos de administrador que pusimos en el docker-compose.
 
 <details>
-  <summary>Dastos de Acceso</summary>
+  <summary>Datos de Acceso</summary>
   <br>
   
 ![Imagen3](Tarea07/imagen3.png)
